@@ -32,8 +32,7 @@ func main() {
 			
 			allowedOrigins := map[string]bool{
 					"http://localhost:3000": true,
-					"https://honey.oyudha.me": true,
-					"http://157.230.193.88:3001": true,
+					cfg.FrontendURL: true,
 			}
 
 			if allowedOrigins[origin] {
