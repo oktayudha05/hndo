@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { login } from "../lib/api";
 import { useRouter } from "next/router";
+import withGuest from "../hoc/withGuest";
 
-export default function Login() {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
@@ -77,3 +78,5 @@ export default function Login() {
     </div>
   );
 }
+
+export default withGuest(Login);

@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { register } from "../lib/api";
 import { useRouter } from "next/router";
+import withGuest from "../hoc/withGuest";
 
-export default function Register() {
+function Register() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -88,3 +89,5 @@ export default function Register() {
     </div>
   );
 }
+
+export default withGuest(Register);

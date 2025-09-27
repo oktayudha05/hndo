@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { fetchTodos, createTodo, toggleTodo, deleteTodo } from "../lib/api";
 import { useRouter } from "next/router";
 import Navbar from "../components/Navbar";
+import withAuth from "../hoc/withAuth";
 
-export default function Home() {
+function Home() {
   const [todos, setTodos] = useState([]);
   const [newTitle, setNewTitle] = useState("");
   const [newDescription, setNewDescription] = useState("");
@@ -325,3 +326,5 @@ export default function Home() {
     </>
   );
 }
+
+export default withAuth(Home);

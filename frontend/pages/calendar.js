@@ -8,6 +8,7 @@ import {
   me,
 } from "../lib/api";
 import { FaChevronLeft, FaChevronRight, FaRegDotCircle } from "react-icons/fa";
+import withAuth from "../hoc/withAuth";
 import Image from "next/image";
 
 // ambil jumlah hari dalam bulan
@@ -29,7 +30,7 @@ function generateCalendar(year, month) {
 // palet warna untuk user lain
 const otherColors = ["#4ade80", "#60a5fa", "#f472b6", "#22d3ee"];
 
-export default function CalendarPage() {
+function CalendarPage() {
   const today = new Date();
   const [currentDate, setCurrentDate] = useState(new Date());
   const [events, setEvents] = useState([]);
@@ -484,3 +485,5 @@ export default function CalendarPage() {
     </>
   );
 }
+
+export default withAuth(CalendarPage);
