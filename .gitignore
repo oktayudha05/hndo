@@ -1,0 +1,21 @@
+# Backend
+/backend/vendor/
+/backend/tmp/
+/backend/.env
+
+# Frontend
+/frontend/node_modules/
+/frontend/.svelte-kit/
+/frontend/build/
+/frontend/.env
+/frontend/.env.*
+!/frontend/.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+*.swp
+*.swo
