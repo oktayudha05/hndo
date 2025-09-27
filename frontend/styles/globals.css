@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+html {
+  @apply bg-gray-50 text-gray-900;
+}
+
+/* Dark mode */
+html.dark {
+  @apply bg-gray-900 text-gray-100;
+}
