@@ -33,6 +33,7 @@ func main() {
 			allowedOrigins := map[string]bool{
 					"http://localhost:3000": true,
 					"http://localhost:5173": true,
+					"http://157.230.193.88:3001": true,
 					"https://honey.oyudha.me": true, // nanti kalau frontend udah di deploy
 			}
 
